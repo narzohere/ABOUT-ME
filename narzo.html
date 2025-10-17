@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>! NEX NARZO</title>
+<style>
+/* === FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500&family=New+Rocker&display=swap');
+
+/* === BODY === */
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at center, #040008 5%, #000 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+}
+
+/* === Particle canvas === */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: transparent;
+}
+
+/* === Glow background === */
+.bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255,255,255,0));
+  filter: blur(120px);
+  animation: pulse 6s infinite alternate ease-in-out;
+  z-index: 1;
+}
+@keyframes pulse {
+  from { transform: scale(1); opacity: 0.4; }
+  to { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* === Profile card === */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  background: rgba(10, 10, 10, 0.85);
+  border-radius: 70px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 30px 25px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* === Profile image === */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 25px #ffffff;
+  object-fit: cover;
+}
+
+/* === Name & subtitle === */
+.name {
+  margin-top: 20px;
+  font-family: 'New Rocker', cursive;
+  font-size: 1.9em;
+  color: #fff;
+  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.95em;
+  color: #ccc;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* === Roles === */
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+.role {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 0.85em;
+  color: #fff;
+  text-shadow: 0 0 6px #ffffff;
+  transition: 0.3s;
+}
+.role:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* === Links === */
+.links {
+  margin-top: 15px;
+}
+.links a {
+  display: inline-block;
+  margin: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.links a:hover {
+  color: #bbb;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+/* === Custom Volume Control === */
+.audio-control {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.volume-label {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  transition: 0.3s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 15px #fff, 0 0 25px #fff;
+  cursor: pointer;
+}
+
+.volume-slider:hover {
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* === Footer === */
+.footer {
+  margin-top: 15px;
+  font-size: 0.75em;
+  color: #888;
+}
+</style>
+</head>
+<body>
+
+<!-- Particles -->
+<canvas id="particles"></canvas>
+
+<!-- Background glow -->
+<div class="bg-glow"></div>
+
+<!-- Profile card -->
+<div class="card">
+  <img src="narzu.jpg" alt="Profile" class="profile-pic">
+  <div class="name">! NEX   NARZO</div>
+  <div class="subtitle">NEX ON TOP 👻 | Panel Developer 😈</div>
+
+  <div class="roles">
+    <div class="role">Owner.exe</div>
+    <div class="role">Panel Developer</div>
+    <div class="role">On Top</div>
+    <div class="role">V I P</div>
+    <div class="role">D E V E L O P E R</div>
+  </div>
+
+  <div class="links">
+    <a href="https://discord.com/users/1385319638421733386" target="_blank">Discord</a>
+    <a href="https://instagram.com/nex_narzo" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@NEX_IS_LIVE-ONTOP" target="_blank">Youtube</a>
+  </div>
+
+  <!-- Custom Audio Control -->
+  <div class="audio-control">
+    <div class="volume-label">VOLUME</div>
+    <input type="range" min="0" max="1" step="0.01" value="0.6" class="volume-slider" id="volumeSlider">
+  </div>
+
+  <div class="footer">© 2025 NEX CORPORATION | NARZO ON TOP</div>
+</div>
+
+<!-- Hidden Audio Element -->
+<audio id="bg-music" loop autoplay>
+  <source src="fuck.mp3" type="audio/mpeg">
+</audio>
+
+<!-- === Script === -->
+<script>
+// === Particles ===
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particlesArray;
+let numParticles = 100;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 0.5;
+    this.speedX = (Math.random() - 0.5) * 0.8;
+    this.speedY = (Math.random() - 0.5) * 0.8;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.8)';
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = '#fff';
+    ctx.fill();
+  }
+}
+function initParticles() {
+  particlesArray = [];
+  for (let i = 0; i < numParticles; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animateParticles);
+}
+initParticles();
+animateParticles();
+
+// === Audio + Volume Control ===
+const music = document.getElementById('bg-music');
+const volumeSlider = document.getElementById('volumeSlider');
+
+// Set initial volume
+music.volume = 0.6;
+
+// Handle volume change
+volumeSlider.addEventListener('input', () => {
+  music.volume = volumeSlider.value;
+});
+
+// Try autoplay
+music.play().catch(() => {
+  // If autoplay fails, show hint
+  const hint = document.createElement('div');
+  hint.textContent = '🔊 Tap anywhere to play music';
+  hint.style.position = 'absolute';
+  hint.style.bottom = '30px';
+  hint.style.color = '#fff';
+  hint.style.textShadow = '0 0 10px #fff';
+  hint.style.fontSize = '0.9em';
+  hint.style.zIndex = '5';
+  hint.style.opacity = '0.8';
+  document.body.appendChild(hint);
+  
+  document.body.addEventListener('click', () => {
+    music.play();
+    hint.remove();
+  }, { once: true });
+});
+</script>
+
+</body>
+</html>
